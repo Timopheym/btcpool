@@ -981,6 +981,15 @@ finish:
   }
 
   if (isSendShareToKafka) {
+    LOG(INFO) << "sending share, worker Job Id: " << share.jobId
+              << ", worker Hash Id: "  << share.workerHashId_
+              << ", worker IP: "  << share.ip_
+              << ", worker User ID: "  << share.userId_
+              << ", worker diff: "  << share.share_
+              << ", worker blkBits: "  << share.blkBits_
+              << ", worker timestamp: "  << share.timestamp_
+              << ", worker result: "  << share.share.result_;
+
   	server_->sendShare2Kafka((const uint8_t *)&share, sizeof(Share));
   }
   return;
