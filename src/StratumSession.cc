@@ -981,7 +981,7 @@ finish:
   }
 
   if (isSendShareToKafka) {
-    LOG(INFO) << "sending share, worker Job Id: " << share.jobId
+    LOG(INFO) << "sending share, worker Job Id: " << share.jobId_
               << ", worker Hash Id: "  << share.workerHashId_
               << ", worker IP: "  << share.ip_
               << ", worker User ID: "  << share.userId_
