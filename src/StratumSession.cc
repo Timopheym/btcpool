@@ -988,7 +988,7 @@ finish:
               << ", worker diff: "  << share.share_
               << ", worker blkBits: "  << share.blkBits_
               << ", worker timestamp: "  << share.timestamp_
-              << ", worker result: "  << share.share.result_;
+              << ", worker result: "  << share.result_;
 
   	server_->sendShare2Kafka((const uint8_t *)&share, sizeof(Share));
   }
